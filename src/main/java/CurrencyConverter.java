@@ -35,6 +35,9 @@ public class CurrencyConverter
             //converting from to USD
             returner = conversionRate[currencyAvailable(from)] * amount;
             //returner is in USD now.
+            //returner to be converted in to currency.
+            returner = returner / conversionRate[currencyAvailable(to)];
+            return returner;
         }
         return 0.0;
     }
